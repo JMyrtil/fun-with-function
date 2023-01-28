@@ -31,7 +31,7 @@ Test this function by hand in the console to get it working, and when you think 
 function multiply(a, b) { //eslint-disable-line
   let prodValue = a * b;
   let prodMessage = `The product of ${a} and ${b} is ${prodValue}.`;
-  return [prodValue, prodMessage];
+  return [prodValue, prodMessage,];
 }
 
 // Here is the test for multiply(); uncomment it to run it
@@ -52,11 +52,17 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sumAndMultiply(a, b, c) { //eslint-disable-line
-
+  let sValue = sum(a, b)[0];
+  let newsValue = sum(sValue, c)[0];
+  let pValue = multiply(a, b)[0];
+  let newpValue = multiply(pValue, c)[0];
+  let sMessage = `${a} and ${b} and ${c} sum to ${newsValue}.`;
+  let pMessage = `The product of ${a} and ${b} and ${c} is ${newpValue}.`;
+  return[newsValue, newpValue, sMessage, pMessage];
 }
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
-// testSumAndMultiply(4,7,5);
+testSumAndMultiply(4,7,5);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
